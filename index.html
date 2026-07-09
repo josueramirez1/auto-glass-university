@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Glass University</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/852a4f6fd4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"
+    ></script>
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <a href="/"
+          ><img
+            class="site-header__logo"
+            src="img/logo.png"
+            alt="logo"
+            width="100px"
+            height="auto"
+        /></a>
+        <nav>
+          <ul class="site-header__nav-links">
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link header-btn" href="/">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link header-btn" href="#section-about"
+                >Attend AGU</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link header-btn"
+                href="#services-section"
+                >Host</a
+              >
+            </li>
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link header-btn"
+                href="#services-section"
+                >Blog</a
+              >
+            </li>
+
+            <li class="site-header__nav-item">
+              <a
+                class="site-header__nav-link header-btn free-quote-btn"
+                href="#section-cta"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <button class="site-header__btn-mobile">
+          <i
+            class="icon-mobile-nav fa-solid fa-bars fa-2x"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="icon-mobile-nav fa-solid fa-xmark fa-2x"
+            aria-hidden="true"
+          ></i>
+        </button>
+      </div>
+      <section class="hero">
+        <div class="wrapper hero__wrapper">
+          <h1 class="hero__title">
+            Training Tomorrow's Auto Glass Professionals
+          </h1>
+          <p class="hero__description">
+            Real world training. Real world skills.
+          </p>
+          <div class="hero__buttons">
+            <button type="text" class="button">Join today!</button>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main id="main">
+      <section class="features">
+        <div class="wrapper features__wrapper">
+          <div class="features__item">
+            <img
+              src="/img/hands-catch-svgrepo-com.svg"
+              alt=""
+              class="features__icon"
+              width="48"
+              height="48"
+            />
+            <h3 class="features__title">Hands on Training</h3>
+            <p class="features__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              dolore deleniti repellendus incidunt, possimus rem temporibus
+              molestiae sed error tenetur.
+            </p>
+          </div>
+          <div class="features__item">
+            <img
+              src="/img/certified-svgrepo-com.svg"
+              alt=""
+              class="features__icon"
+              width="48"
+              height="48"
+            />
+            <h3 class="features__title">Certified Instructors</h3>
+            <p class="features__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              dolore deleniti repellendus incidunt, possimus rem temporibus
+              molestiae sed error tenetur.
+            </p>
+          </div>
+          <div class="features__item">
+            <img
+              src="/img/verified-svgrepo-com.svg"
+              alt=""
+              class="features__icon"
+              width="48"
+              height="48"
+            />
+            <h3 class="features__title">Industry Recognized</h3>
+            <p class="features__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              dolore deleniti repellendus incidunt, possimus rem temporibus
+              molestiae sed error tenetur.
+            </p>
+          </div>
+          <div class="features__item">
+            <img
+              src="/img/bar-chart-trend-2-svgrepo-com.svg"
+              alt=""
+              class="features__icon"
+              width="48"
+              height="48"
+            />
+            <h3 class="features__title">Career Focused</h3>
+            <p class="features__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+              dolore deleniti repellendus incidunt, possimus rem temporibus
+              molestiae sed error tenetur.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="wrapper about__wrapper">
+          <div class="about__description">
+            <h2 class="about__title">How it works</h2>
+            <p>
+              Our week long programs are divided into three categories, and are
+              accessible to as many locations as possible. Our auto glass
+              programs are hosted in locations all across the country, so no
+              matter where you are there is a class close by. If it’s better for
+              your team to be trained on site, we offer an option for that as
+              well. This allows a technician to come to you and have your team
+              trained on the job with the best hands-on learning.
+            </p>
+            <br />
+            <p>
+              Lastly, we offer an option for your company to choose which areas
+              you would like to cover, at your location, focusing on what will
+              benefit your technicians specifically. Our variety of class
+              options allow you to learn in the environment that is best for you
+              and your team!
+            </p>
+          </div>
+          <img src="./img/Rav4Prep.jpeg" alt="" class="about__img" />
+        </div>
+      </section>
+      <section class="schedule">
+        <div class="wrapper schedule__wrapper">
+          <h2 class="schedule__title">
+            Registration available for the following classes:
+          </h2>
+          <div class="schedule__cards">
+            <div class="schedule__card">
+              <p>
+                <span class="schedule__city">San Bernardino, California</span
+                ><br />
+                July 27-31, Direct Quality Auto Glass as Partner Shop
+              </p>
+              <br />
+              <address>
+                708 W Mill Street, Unit F San Bernardino, CA 92410
+              </address>
+            </div>
+
+            <div class="schedule__card">
+              <p>
+                <span class="schedule__city">Nashville, Tennessee</span><br />
+                September 21-25, Carlex Corporation North America
+              </p>
+              <br />
+              <address>7200 Centennial Blvd Nashville, TN 37209</address>
+            </div>
+            <div class="schedule__card">
+              <p>
+                <span class="schedule__city"> Nashville, Tennessee </span><br />
+                October 19-23, Carlex Corporation North America
+              </p>
+              <br />
+              <address>7200 Centennial Blvd Nashville, TN 37209</address>
+            </div>
+            <div class="schedule__card">
+              <p>
+                <span class="schedule__city">
+                  Phoenix / Glendale, Arizona
+                </span>
+                November 9 -13, PGW Buysite Glendale
+              </p>
+              <br />
+              <address>5850 N 101st Avenue Glendale, AZ 85307</address>
+            </div>
+            <div class="schedule__card">
+              <p>
+                <span class="schedule__city">
+                  Phoenix / Glendale, Arizona
+                </span>
+                December 7-11, PGW Buysite Glendale
+              </p>
+              <br />
+              <address>5850 N 101st Avenue Glendale, AZ 85307</address>
+            </div>
+          </div>
+          <div class="schedule__button">
+            <button class="button">Click here to Register!</button>
+          </div>
+        </div>
+      </section>
+      <section id="section-cta"></section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <div class="footer__logo-cols">
+          <a class="footer__logo" href="#">
+            <img src="img/logo.png" alt="" />
+          </a>
+          <ul class="footer__social-links">
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-facebook fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-instagram fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-tiktok fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-youtube fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-linkedin fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-x-twitter fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-pinterest fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-yelp fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <i
+                  class="fa-brands fa-google fa-2x"
+                  style="color: #054d80"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__address-cols">
+          <h3 class="footer__heading">Contact Us</h3>
+          <address class="footer__contacts">
+            <p class="footer__address">
+              708 W Mill St, San Bernardino CA, 92410 Unit F
+            </p>
+            <p>
+              <a class="footer__link" href="tel:909-251-6568">(909)251-6568</a>
+              Main
+            </p>
+            <p>
+              <a class="footer__link" href="tel:909-600-8394"> (909)600-8394</a>
+              Secondary
+            </p>
+          </address>
+        </div>
+        <div class="footer__open-cols">
+          <h3 class="footer__heading">Opening Hours</h3>
+          <p class="footer__hours">Monday - Friday: 8:00am - 5:00pm​​</p>
+          <br />
+          <p class="footer__hours">Saturday: 8:00am - 1:00pm​</p>
+          <br />
+          <p class="footer__hours">Sunday: Closed</p>
+        </div>
+        <div class="footer__resources-cols">
+          <div>
+            <h3 class="footer__heading">Resources</h3>
+          </div>
+          <div class="footer__links">
+            <p><a class="footer__local-link" href="">About</a></p>
+            <br />
+            <p><a class="footer__local-link" href="">Specials</a></p>
+            <br />
+            <p><a class="footer__local-link" href="">Services</a></p>
+            <br />
+            <p><a class="footer__local-link" href="">Blog</a></p>
+            <br />
+            <p><a class="footer__local-link" href="">Contact Page</a></p>
+            <br />
+          </div>
+        </div>
+        <div class="footer__end">
+          <p class="copyright">
+            © 2024 Direct Quality Auto Glass. All Rights Reserved
+          </p>
+          <div class="btt">
+            <a href="#backToTop" class="btt-btn margin-bottom-md"
+              >Back to Top</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

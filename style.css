@@ -1,0 +1,453 @@
+@layer global, component, utility;
+
+@layer global {
+  /* orbitron-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/orbitron-v35-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* orbitron-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/orbitron-v35-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* open-sans-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/open-sans-v44-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* open-sans-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./fonts/open-sans-v44-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* Fonts */
+
+  :root {
+    --fs-14: calc(14 / 16 * 1rem);
+    --fs-16: calc(16 / 16 * 1rem);
+    --fs-24: calc(24 / 16 * 1rem);
+    --fs-36: calc(36 / 16 * 1rem);
+    --fs-42: calc(42 / 16 * 1rem);
+    --fs-48: calc(48 / 16 * 1rem);
+    --fs-72: calc(72 / 16 * 1rem);
+
+    --font-size-topnav: var(--fs-14);
+    --font-size-h1: var(--fs-42);
+    --font-size-h2: var(--fs-36);
+    --font-size-h3: var(--fs-24);
+    --font-size-p: var(--fs-14);
+    --font-size-button: (var(--fs-36));
+
+    @media (width >= calc(600 / 16 * 1rem)) {
+      --font-size-topnav: var(--fs-16);
+      --font-size-h1: var(--fs-72);
+      --font-size-h2: var(--fs-48);
+      --font-size-p: var(--fs-16);
+      --font-size-button: (var(--fs-42));
+    }
+  }
+
+  /* Colors */
+  :root {
+    --c-white: hsl(0, 0%, 100%);
+    --c-gray-dark: hsl(233, 14%, 25%);
+    --c-blue: hsl(205, 93%, 36%);
+    --c-red: hsl(358, 93%, 47%);
+    --c-black: hsl(0, 0%, 0%);
+    --c-transparent: transparent;
+
+    --color-text-dark: var(--c-gray-dark);
+    --color-text-light: var(--c-white);
+    --color-header-bg: var(--c-white);
+    --color-hero-bg: var(--c-gray-dark);
+    --color-features-bg: var(--c-white);
+    --color-about-bg: var(--c-blue);
+    --color-footer-bg: var(--c-white);
+    --color-footer-link: var(--c-red);
+    --color-button-primary-bg: var(--c-teal);
+    --color-button-primary-text: var(--c-gray-dark);
+    --color-button-secondary-bg: var(--c-transparent);
+    --color-button-secondary-border: var(--c-white);
+    --color-button-secondary-text: var(--c-white);
+    --color-fullwidth-bg: var(--c-magenta);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    line-height: 1.3;
+    color: var(--color-text-light);
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+  h2 {
+    font-size: var(--font-size-h2);
+  }
+  h3 {
+    font-size: var(--font-size-h3);
+  }
+
+  p {
+    font-size: var(--font-size-p);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img,
+  picture,
+  svg,
+  i {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* begin on mobile */
+  /* The 48px is the margin left and margin right given in the figma design */
+  .wrapper {
+    width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
+    margin-inline: auto;
+  }
+
+  .button {
+    border: 1px solid black;
+    background: none;
+    border-radius: 11px;
+    padding-block: 8px;
+    padding-inline: 12px;
+    cursor: pointer;
+    font-family: "Orbitron";
+    font-size: var(--font-size-button);
+  }
+
+  .active {
+    display: block;
+  }
+}
+
+@layer component {
+  .site-header {
+    background-color: var(--color-text-light);
+    background-image: url("./img/student.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 100vh;
+
+    .site-header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 12px;
+    }
+
+    .site-header__nav-logo {
+      width: calc(90 / 16 * 1rem);
+    }
+
+    .site-header__nav-links {
+      display: none;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        list-style: none;
+        color: var(--color-text-dark);
+      }
+    }
+
+    .site-header__nav-link {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--color-text-light);
+      font-size: var(--fs-14);
+      text-transform: uppercase;
+    }
+
+    .site-header__btn-mobile {
+      display: block;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        display: none;
+      }
+    }
+  }
+
+  .hero {
+    min-height: calc(100vh - 84px);
+    place-content: center;
+
+    .hero__wrapper {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+      text-align: center;
+    }
+
+    .hero__title {
+      font-family: Orbitron;
+      font-size: var(--font-size-h1);
+      display: inline-block;
+
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .hero__description {
+      font-size: var(--font-size-p);
+      display: inline-block;
+
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .hero__buttons button {
+      border: 1px solid #fff;
+      color: #fff;
+      display: inline-block;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 150ms ease-in-out;
+      transition-property: background-color, color;
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .features {
+    background-color: var(--color-features-bg);
+    color: var(--color-button-primary-text);
+    padding-block: 60px;
+
+    .features__wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      gap: 24px;
+    }
+
+    .features__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .features__icon {
+      height: 48px;
+      width: auto;
+      color: #e70810;
+    }
+    .features__title {
+      text-align: center;
+    }
+    .features__description {
+    }
+  }
+
+  .about {
+    background-color: var(--color-about-bg);
+    color: var(--color-text-white);
+    padding-block: 60px;
+
+    .about__wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .about__description {
+      opacity: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-block-end: 24px;
+    }
+
+    .about__title {
+      font-family: Orbitron;
+      font-size: var(--font-size-h2);
+      margin-block-end: 20px;
+    }
+
+    .about__img {
+      opacity: 0;
+
+      width: 350px;
+      border-radius: 20px;
+      @media (width >= calc(600/16 * 1rem)) {
+        width: 750px;
+      }
+    }
+  }
+
+  .schedule {
+    padding-block: 60px;
+
+    .schedule__wrapper {
+      color: var(--c-gray-dark);
+    }
+
+    .schedule__title {
+      font-family: Orbitron;
+      font-size: var(--font-size-h2);
+      margin-block-end: 20px;
+      text-align: center;
+    }
+
+    .schedule__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-block-end: 20px;
+    }
+
+    .schedule__card {
+      border: 1px solid black;
+      border-radius: 11px;
+      padding: 5px;
+    }
+
+    .schedule__city {
+      color: var(--c-red);
+      font-weight: 800;
+    }
+
+    .schedule__button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-dark);
+    padding-block: 24px;
+    border-top: 1px solid #eee;
+
+    .footer__wrapper {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      }
+    }
+
+    .footer__logo-cols {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .footer__social-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      list-style: none;
+      gap: 24px;
+      justify-items: center;
+      padding: 0;
+    }
+
+    .footer__heading {
+      margin: 2rem 0 4rem 0;
+      text-align: center;
+    }
+
+    .footer__contacts {
+      font-style: normal;
+      line-height: 1.6;
+    }
+
+    .footer__address {
+      font-style: inherit;
+      margin-bottom: 2.4rem;
+    }
+
+    .footer__heading {
+      margin: 2rem 0 4rem 0;
+      text-align: center;
+    }
+
+    .footer__hours {
+      line-height: 1.6;
+    }
+
+    .footer__heading {
+      margin: 2rem 0 4rem 0;
+
+      text-align: center;
+    }
+
+    .footer__local-link {
+      cursor: pointer;
+      color: hsl(205, 92%, 26%);
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .footer__end {
+      text-align: center;
+      margin-block-start: 48px;
+
+      @media (width >= calc(600 / 16 * 1rem)) {
+        grid-column: 1 /-1;
+      }
+    }
+  }
+}
+
+@layer utility {
+}
