@@ -75,60 +75,320 @@
         <div class="wrapper form__wrapper">
           <h1 class="form__title">Single Student Registration</h1>
           <form class="form__submission" action="">
-            <div class="form__input">
-              <label for="first-name">First name</label>
-              <input id="first-name" type="text" placeholder="Joe" />
+            <div class="form__info">
+              <label class="form__label" for="first-name">First name</label>
+              <input
+                class="form__text"
+                id="first-name"
+                type="text"
+                placeholder="Joe"
+              />
             </div>
-            <div class="form__input">
-              <label for="last-name">Last name</label>
-              <input id="last-name" type="text" placeholder="Smith" />
+            <div class="form__info">
+              <label class="form__label" for="last-name">Last name</label>
+              <input
+                class="form__text"
+                id="last-name"
+                type="text"
+                placeholder="Smith"
+              />
             </div>
-            <div class="form__input">
-              <label for="company-name">Company name (if applicable)</label>
+            <div class="form__info">
+              <label class="form__label" for="company-name"
+                >Company name (if applicable)</label
+              >
               <input
                 id="company-name"
                 type="text"
+                class="form__text"
                 placeholder="Auto Glass Company"
               />
             </div>
-            <div class="form__input">
-              <label for="">Address</label>
-              <input type="text" placeholder="123 Auto St." />
-            </div>
-            <div class="form__input">
-              <label for="">Apartment, Suite, etc</label>
-              <input type="text" placeholder="Unit #123" />
-            </div>
-            <div class="form__input">
-              <label for="">City</label>
-              <input type="text" placeholder="Glasstown" />
-            </div>
-            <div class="form__input">
-              <label for="state">State</label>
-              <input id="state" type="text" placeholder="State" />
-            </div>
-            <div class="form__input">
-              <label for="zip">ZIP / Postal Code</label>
-              <input id="zip" type="number" placeholder="12345" />
-            </div>
-
-            <div class="form__radio">
-              <label for="">Is this a home or business?</label>
-              <input type="radio" name="home" id="location" value="home" />
-              <label for="home">Home</label>
-
+            <div class="form__info">
+              <label class="form__label" for="">Address</label>
               <input
-                type="radio"
-                name="business"
-                id="location"
-                value="business"
+                type="text"
+                class="form__text"
+                placeholder="123 Auto St."
               />
-              <label for="home">Business</label>
             </div>
-            <div class="form__button-div">
-              <button class="form__submit" type="submit">
-                Submit Application
-              </button>
+            <div class="form__info">
+              <label class="form__label" for="">Apartment, Suite, etc</label>
+              <input class="form__text" type="text" placeholder="Unit #123" />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="">City</label>
+              <input class="form__text" type="text" placeholder="Glasstown" />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="state">State</label>
+              <input
+                class="form__text"
+                id="state"
+                type="text"
+                placeholder="State"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="zip">ZIP / Postal Code</label>
+              <input
+                class="form__number"
+                id="zip"
+                type="number"
+                placeholder="12345"
+              />
+            </div>
+            <div class="form__info">
+              <fieldset class="form__fieldset">
+                <legend>Is this a home or business?</legend>
+                <input
+                  type="radio"
+                  name="home"
+                  id="location"
+                  value="home"
+                  class="form__radio"
+                />
+                <label class="form__label" for="home">Home</label>
+
+                <input
+                  type="radio"
+                  name="business"
+                  id="location"
+                  value="business"
+                  class="form__radio"
+                />
+                <label class="form__label" for="home">Business</label>
+              </fieldset>
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="first-name">Phone Number</label>
+              <input
+                id="first-name"
+                type="text"
+                class="form__text"
+                placeholder="(123) 456-7890"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="first-name">Email Address</label>
+              <input
+                id="first-name"
+                type="text"
+                class="form__text"
+                placeholder="auto@glass.com"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="first-name"
+                >Emergency Contact Name</label
+              >
+              <input
+                id="first-name"
+                type="text"
+                class="form__text"
+                placeholder="Joe"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="first-name"
+                >Emergency Contact Number</label
+              >
+              <input
+                id="first-name"
+                type="text"
+                placeholder="(123)456-7890"
+                class="form__text"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="first-name"
+                >Credential Tracking Number</label
+              >
+              <input
+                id="first-name"
+                type="text"
+                class="form__text"
+                placeholder="0123456789"
+              />
+            </div>
+            <div class="form__info">
+              <p>
+                <span>NOTE</span>
+                * The number requested by credentialing organizations is the
+                last four digits of your Social Security Number, however, any
+                four numbers will be sufficient. The tracking number must be
+                consistently used for all industry training program for proper
+                credit to be applied.
+              </p>
+              <br />
+              <p>
+                For purposes of training verification, AGC requires permission
+                to disclose the following information to industry credentialing
+                organizations,
+              </p>
+              <ul class="form__list-examples">
+                <li class="form__list-example">Name</li>
+                <li>Tracking Number</li>
+                <li>Final exam score</li>
+              </ul>
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="length-of-time"
+                >How long have you been in the auto glass industry</label
+              >
+              <input
+                id="length-of-time"
+                type="number"
+                class="form__number"
+                placeholder="1"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="years-of-xp"
+                >How many years of experience do you have in auto glass
+                replacement?</label
+              >
+              <input
+                id="years-of-xp"
+                type="number"
+                class="form__number"
+                placeholder="1"
+              />
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="years-of-repair"
+                >How many years of experience do you have in auto glass
+                repair?</label
+              >
+              <input
+                id="years-of-repair"
+                type="number"
+                class="form__number"
+                placeholder="1"
+              />
+            </div>
+            <div class="form__info">
+              <fieldset class="form__fieldset">
+                <legend>Are you familiar with auto glass tools?</legend>
+                <input
+                  id="tools-yes"
+                  type="radio"
+                  value="yes"
+                  class="form__radio"
+                />
+                <label class="form__label" for="tools-yes">Yes</label>
+                <input
+                  id="tools-no"
+                  type="radio"
+                  value="no"
+                  class="form__radio"
+                />
+                <label class="form__label" for="tools-no">No</label>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend>
+                  Do you work for a company that is an AGSC Member?
+                </legend>
+                <input
+                  id="member-yes"
+                  type="radio"
+                  value="yes"
+                  class="form__radio"
+                />
+                <label class="form__label" for="member-yes">Yes</label>
+                <input
+                  id="member-no"
+                  type="radio"
+                  value="no"
+                  class="form__radio"
+                />
+                <label class="form__label" for="member-no">No</label>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend>
+                  Do you have any prior training in auto glass repair and/or
+                  replacement?
+                </legend>
+                <input
+                  id="exp-yes"
+                  type="radio"
+                  value="yes"
+                  class="form__radio"
+                />
+                <label class="form__label" for="exp-yes">Yes</label>
+                <input
+                  id="exp-no"
+                  type="radio"
+                  value="no"
+                  class="form__radio"
+                />
+                <label class="form__label" for="exp-no">No</label>
+              </fieldset>
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="job-description"
+                >Please check which best describes your job description</label
+              >
+              <div class="form__checkboxes">
+                <input
+                  id="job-description"
+                  type="checkbox"
+                  class="form__checkbox"
+                />
+                <label class="form__label" for="">Owner</label>
+                <input
+                  id="job-description"
+                  type="checkbox"
+                  class="form__checkbox"
+                />
+                <label class="form__label" for="">Management</label>
+                <input
+                  id="job-description"
+                  type="checkbox"
+                  class="form__checkbox"
+                />
+                <label class="form__label" for="">Sales</label>
+                <input
+                  id="job-description"
+                  type="checkbox"
+                  class="form__checkbox"
+                />
+                <label class="form__label" for="">Technician</label>
+                <input
+                  id="job-description"
+                  type="checkbox"
+                  class="form__checkbox"
+                />
+                <label class="form__label" for="">Other</label>
+              </div>
+            </div>
+            <div class="form__info">
+              <label class="form__label" for="">Class Date and Location</label>
+              <select class="form__select" name="" id="">
+                <option class="form__option" value="">Please select...</option>
+                <option class="form__option" value="">
+                  07/27 - 07/31 Direct Quality Auto Glass | San Bernardino, CA
+                </option>
+                <option class="form__option" value="">
+                  09/21 - 9/25 Carlex Nashville, TN
+                </option>
+                <option class="form__option" value="">
+                  10/19 - 10/23 Carlex Nashville, TN
+                </option>
+                <option class="form__option" value="">
+                  11/9 - 11/13 PGW Phoenix, Az
+                </option>
+                <option class="form__option" value="">
+                  12/7 - 12/11 PGW Phoenix, Az
+                </option>
+              </select>
+            </div>
+            <div class="form__info">
+              <div class="form__button-div">
+                <button class="form__submit" type="submit">
+                  Submit Application & Payment
+                </button>
+              </div>
             </div>
           </form>
         </div>
