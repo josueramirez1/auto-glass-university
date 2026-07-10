@@ -18,77 +18,71 @@
       defer
       src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"
     ></script>
-    <script defer src="./script.js"></script>
+    <script type="module" defer src="./script.js"></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrapper site-header__wrapper">
-        <a href="/"
-          ><img
-            class="site-header__logo"
-            src="img/logo.png"
-            alt="logo"
-            width="100px"
-            height="auto"
-        /></a>
-        <nav>
-          <ul class="site-header__nav-links">
-            <li class="site-header__nav-item">
-              <a class="site-header__nav-link header-btn" href="/">Home</a>
-            </li>
-            <li class="site-header__nav-item">
-              <a class="site-header__nav-link header-btn" href="#section-about"
-                >Attend AGU</a
-              >
-            </li>
-            <li class="site-header__nav-item">
-              <a
-                class="site-header__nav-link header-btn"
-                href="#services-section"
-                >Host</a
-              >
-            </li>
-            <li class="site-header__nav-item">
-              <a
-                class="site-header__nav-link header-btn"
-                href="#services-section"
-                >Blog</a
-              >
-            </li>
+    <header class="header">
+      <div class="header__background">
+        <div class="wrapper header__wrapper">
+          <nav class="header__nav">
+            <a href="/"
+              ><img
+                class="header__logo"
+                src="img/logo.png"
+                alt="logo"
+                width="100px"
+                height="auto"
+            /></a>
 
-            <li class="site-header__nav-item">
-              <a
-                class="site-header__nav-link header-btn free-quote-btn"
-                href="#section-cta"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <button class="site-header__btn-mobile">
-          <i
-            class="icon-mobile-nav fa-solid fa-bars fa-2x"
-            aria-hidden="true"
-          ></i>
-          <i
-            class="icon-mobile-nav fa-solid fa-xmark fa-2x"
-            aria-hidden="true"
-          ></i>
-        </button>
-      </div>
-      <section class="hero">
-        <div class="wrapper hero__wrapper">
-          <h1 class="hero__title">
-            Training Tomorrow's Auto Glass Professionals
-          </h1>
-          <p class="hero__description">
-            Real world training. Real world skills.
-          </p>
-          <div class="hero__buttons">
-            <button type="text" class="button">Join today!</button>
-          </div>
+            <ul class="header__nav-links">
+              <li class="header__nav-item">
+                <a class="header__nav-link header-btn" href="/">Home</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link header-btn" href="#section-about"
+                  >Attend AGU</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link header-btn" href="#services-section"
+                  >Host</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link header-btn" href="#services-section"
+                  >Blog</a
+                >
+              </li>
+
+              <li class="header__nav-item">
+                <a
+                  class="header__nav-link header-btn free-quote-btn"
+                  href="#section-cta"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+
+            <button class="header__btn-mobile">
+              <i class="fa-solid fa-bars fa-2x" aria-hidden="true"></i>
+              <i class="fa-solid fa-xmark fa-2x" aria-hidden="true"></i>
+            </button>
+          </nav>
         </div>
-      </section>
+        <section class="hero">
+          <div class="wrapper hero__wrapper">
+            <h1 class="hero__title">
+              Training Tomorrow's Auto Glass Professionals
+            </h1>
+            <p class="hero__description">
+              Real world training. Real world skills.
+            </p>
+            <div class="hero__buttons">
+              <button type="text" class="button">Join today!</button>
+            </div>
+          </div>
+        </section>
+      </div>
     </header>
     <main id="main">
       <section class="features">
