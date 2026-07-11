@@ -79,11 +79,11 @@
     --color-about-bg: var(--c-blue);
     --color-footer-bg: var(--c-white);
     --color-footer-link: var(--c-red);
-    --color-button-primary-bg: var(--c-teal);
+    --color-button-primary-bg: var(--c-white);
     --color-button-primary-text: var(--c-gray-dark);
     --color-button-secondary-bg: var(--c-transparent);
     --color-button-secondary-border: var(--c-white);
-    --color-button-secondary-text: var(--c-white);
+    --color-button-secondary-text: var(--c-gray-dark);
     --color-fullwidth-bg: var(--c-magenta);
   }
 
@@ -148,8 +148,8 @@
     margin-inline: auto;
   }
 
-  .button {
-    border: 1px solid black;
+  .link {
+    border: 1px solid #fff;
     background: none;
     border-radius: 11px;
     padding-block: 8px;
@@ -157,6 +157,7 @@
     cursor: pointer;
     font-family: "Orbitron";
     font-size: var(--font-size-button);
+    color: var(--color-button-primary-bg);
   }
 
   .active {
@@ -373,6 +374,11 @@
     .schedule__button {
       display: flex;
       justify-content: center;
+
+      .link {
+        color: var(--color-button-secondary-text);
+        border: 1px solid #000;
+      }
     }
   }
 
