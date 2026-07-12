@@ -26,7 +26,7 @@ gsap.to(".features__item, .about__description, .about__img", {
   },
 });
 
-//HAMBURGER
+//MENU
 const openMenu = document.querySelector(".fa-bars");
 const closeMenu = document.querySelector(".fa-xmark");
 const nav = document.querySelector(".header__wrapper");

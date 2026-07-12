@@ -167,6 +167,10 @@
 
 @layer component {
   .header {
+    .header__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
     .header__background {
       background-color: var(--color-text-light);
       background-image: url("./img/student.jpg");
@@ -181,7 +185,7 @@
       display: flex;
       justify-content: space-between;
       position: relative;
-      height: 100%;
+      width: 100%;
     }
 
     .header__nav-links {
@@ -229,6 +233,7 @@
 
     .hero__wrapper {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: 12px;
       align-content: center;
       text-align: center;
@@ -574,22 +579,23 @@
 
 @layer utility {
   .active-menu {
-    background-color: red;
-    z-index: 1;
+    background-color: #000;
     width: auto;
     height: 100vh;
     padding: 0 24px 0 24px;
   }
 
   .active-list {
-    align-self: center;
-    justify-self: center;
+    /* remove default stying */
+    padding: 0;
 
+    /* Move nav links to the center away from logo and menu buttons */
+    align-self: center;
+
+    /* nav links are in a column */
     display: flex;
     flex-direction: column;
     list-style: none;
     align-items: center;
-
-    padding: 0;
   }
 }
