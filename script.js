@@ -35,9 +35,13 @@ const navLinks = document.querySelector(".header__nav-links");
 openMenu.addEventListener("click", () => {
   nav.classList.add("active-menu");
   navLinks.classList.add("active-list");
+  openMenu.classList.add("hide-icon");
+  closeMenu.classList.remove("hide-icon");
 });
 
 closeMenu.addEventListener("click", () => {
   nav.classList.remove("active-menu");
   navLinks.classList.remove("active-list");
+  openMenu.classList.remove("hide-icon");
+  closeMenu.classList.add("hide-icon");
 });

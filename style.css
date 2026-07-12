@@ -182,7 +182,6 @@
       justify-content: space-between;
     }
     .header__background {
-      background-color: var(--color-text-light);
       background-image: url("./img/student.jpg");
       background-repeat: no-repeat;
       background-position: center;
@@ -196,6 +195,12 @@
       justify-content: space-between;
       position: relative;
       width: 100%;
+      color: var(--color-text-light);
+    }
+
+    /* registration page link colors */
+    .header__nav.registration {
+      color: var(--color-text-dark);
     }
 
     .header__nav-links {
@@ -209,21 +214,22 @@
       }
     }
 
+    /* registration page link colors */
+    .header__nav-links.active-list {
+      color: var(--color-text-light);
+    }
+
     .header__nav-link {
       font-weight: 700;
       letter-spacing: 0.05em;
-      color: var(--color-text-light);
       font-size: var(--fs-14);
       font-family: Orbitron;
       text-transform: uppercase;
-    }
-
-    .header__bars {
-    }
-    .header__xmark {
+      color: inherit;
     }
 
     .header__btn-mobile {
+      color: var(--c-red);
       align-self: flex-start;
 
       border: none;
@@ -551,12 +557,7 @@
       font-family: inherit;
       font-size: var(--font-size-p);
     }
-    .form__number {
-    }
-    .form__radio {
-    }
-    .form__checkbox {
-    }
+
     .form__select {
       font-family: inherit;
     }
@@ -596,10 +597,10 @@
 
 @layer utility {
   .active-menu {
-    background-color: #000;
     width: auto;
     height: 100vh;
     padding: 0 24px 0 24px;
+    background-color: var(--c-black);
   }
 
   .active-list {
@@ -608,11 +609,16 @@
 
     /* Move nav links to the center away from logo and menu buttons */
     align-self: center;
+    margin-inline-start: -24px;
 
     /* nav links are in a column */
     display: flex;
     flex-direction: column;
     list-style: none;
     align-items: center;
+  }
+
+  .hide-icon {
+    display: none !important;
   }
 }
