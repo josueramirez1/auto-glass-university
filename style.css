@@ -79,11 +79,14 @@
     --color-about-bg: var(--c-blue);
     --color-footer-bg: var(--c-white);
     --color-footer-link: var(--c-red);
-    --color-button-primary-bg: var(--c-white);
-    --color-button-primary-text: var(--c-gray-dark);
-    --color-button-secondary-bg: var(--c-transparent);
+    --color-button-primary-bg: var(--c-transparent);
+    --color-button-primary-text: var(--c-white);
+    --color-button-primary-bg-hover: var(--c-white);
+    --color-button-secondary-bg: var(--c-white);
     --color-button-secondary-border: var(--c-white);
     --color-button-secondary-text: var(--c-gray-dark);
+    --color-button-secondary-text-hover: var(--c-white);
+    --color-button-secondary-bg-hover: var(--c-black);
     --color-fullwidth-bg: var(--c-magenta);
   }
 
@@ -157,11 +160,13 @@
     cursor: pointer;
     font-family: "Orbitron";
     font-size: var(--font-size-button);
-    color: var(--color-button-primary-bg);
+    color: var(--color-button-primary-text);
   }
 
-  .active {
-    display: block;
+  .link:hover {
+    background-color: var(--color-button-primary-bg-hover);
+    color: var(--color-button-secondary-text);
+    transition: 0.2s ease-in-out;
   }
 }
 
@@ -234,7 +239,7 @@
     .hero__wrapper {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      gap: 12px;
+      gap: 18px;
       align-content: center;
       text-align: center;
     }
@@ -249,8 +254,10 @@
     }
 
     .hero__description {
-      font-size: var(--font-size-p);
+      font-size: var(--font-size-h3);
+      font-family: Orbitron;
       display: inline-block;
+      margin-block-end: 18px;
 
       opacity: 0;
       transform: translateY(30px);
@@ -274,7 +281,7 @@
 
   .features {
     background-color: var(--color-features-bg);
-    color: var(--color-button-primary-text);
+    color: var(--color-text-dark);
     padding-block: 60px;
 
     .features__wrapper {
@@ -311,8 +318,7 @@
 
     .about__wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       align-items: center;
       gap: 24px;
     }
@@ -336,7 +342,6 @@
     .about__img {
       opacity: 0;
 
-      width: 350px;
       border-radius: 20px;
       @media (width >= calc(600/16 * 1rem)) {
         width: 750px;
@@ -346,6 +351,7 @@
 
   .schedule {
     padding-block: 60px;
+    color: var(--color-text-dark);
 
     .schedule__wrapper {
       color: var(--c-gray-dark);
@@ -383,6 +389,12 @@
       .link {
         color: var(--color-button-secondary-text);
         border: 1px solid #000;
+      }
+
+      .link:hover {
+        color: var(--color-button-secondary-text-hover);
+        background-color: var(--color-button-secondary-bg-hover);
+        transition: 0.2s ease-in-out;
       }
     }
   }
