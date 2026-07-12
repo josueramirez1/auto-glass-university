@@ -73,18 +73,23 @@
 
     --color-text-dark: var(--c-gray-dark);
     --color-text-light: var(--c-white);
+
     --color-header-bg: var(--c-white);
     --color-hero-bg: var(--c-gray-dark);
     --color-features-bg: var(--c-white);
     --color-about-bg: var(--c-blue);
     --color-footer-bg: var(--c-white);
+
     --color-footer-link: var(--c-red);
+
     --color-button-primary-bg: var(--c-transparent);
+    --color-button-primary-border: var(--c-white);
     --color-button-primary-text: var(--c-white);
     --color-button-primary-bg-hover: var(--c-white);
+
     --color-button-secondary-bg: var(--c-white);
-    --color-button-secondary-border: var(--c-white);
-    --color-button-secondary-text: var(--c-gray-dark);
+    --color-button-secondary-border: var(--c-black);
+    --color-button-secondary-text: var(--c-black);
     --color-button-secondary-text-hover: var(--c-white);
     --color-button-secondary-bg-hover: var(--c-black);
     --color-fullwidth-bg: var(--c-magenta);
